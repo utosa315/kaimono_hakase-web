@@ -48,6 +48,12 @@ ul { margin: 0.75rem 0; padding-left: 1.4rem; }
 li + li { margin-top: 0.25rem; }
 .updated { margin: 0; font-size: 0.84rem; }
 .note { margin: 1.5rem 0; padding: 1.1rem 1.2rem; border: 1px solid #f0d7c7; border-radius: 14px; background: var(--pale); font-size: 0.9rem; }
+.affiliate-disclosure { margin: 1.5rem 0 2rem; padding: 1.1rem 1.2rem; border: 1px solid #e2c5b2; border-radius: 14px; background: #fff7f1; }
+.affiliate-disclosure strong { display: block; margin-bottom: 0.25rem; color: var(--ink); font-size: 0.92rem; }
+.affiliate-disclosure p { margin: 0; color: #55515a; font-size: 0.9rem; }
+.program-list { display: grid; gap: 0.75rem; padding-left: 1.35rem; }
+.program-list li { padding-left: 0.15rem; }
+.program-list strong { color: var(--ink); }
 .page-nav { display: flex; flex-wrap: wrap; gap: 0.7rem 1.35rem; margin-top: 3.2rem; padding-top: 1.3rem; border-top: 1px solid var(--line); font-size: 0.88rem; }
 
 .home { display: grid; align-content: center; min-height: 100vh; padding-block: 4rem; }
