@@ -3,36 +3,116 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title data-ja="かいもの博士｜公式サイト" data-en="Dr. Kaimono | Official Site">かいもの博士｜公式サイト</title>
-  <meta name="description" data-ja="買い物比較アプリ『かいもの博士』の公式サイトです。" data-en="The official website for Dr. Kaimono, a shopping comparison app." content="買い物比較アプリ『かいもの博士』の公式サイトです。">
+  <title data-ja="かいもの博士｜1つのキーワードで通販・フリマを横断検索" data-en="Dr. Kaimono | Search every shop with one keyword">かいもの博士｜1つのキーワードで通販・フリマを横断検索</title>
+  <meta name="description" data-ja="Amazon・楽天・Yahoo!ショッピング・メルカリ・ラクマ・Yahoo!フリマなどを1つのキーワードで順番に検索。ポイントやクーポン込みの実質最安を、公式サイトで自分の目で確かめられる無料アプリ「かいもの博士」の公式サイト。" data-en="Search Amazon, Rakuten, Yahoo! Shopping, Mercari and more in Japan with a single keyword and compare real prices on each official site. Official site of the free Dr. Kaimono app." content="Amazon・楽天・Yahoo!ショッピング・メルカリ・ラクマ・Yahoo!フリマなどを1つのキーワードで順番に検索。ポイントやクーポン込みの実質最安を、公式サイトで自分の目で確かめられる無料アプリ「かいもの博士」の公式サイト。">
   <meta name="theme-color" content="#fbf8f2">
+  <meta property="og:title" content="かいもの博士｜1つのキーワードで通販・フリマを横断検索">
+  <meta property="og:description" content="Amazon・楽天・メルカリなど9サイトを1つのキーワードで巡回。ポイント込みの実質最安を公式サイトで確認できる無料アプリ。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kaimono-hakase.tardigrader.com/">
+  <link rel="canonical" href="https://kaimono-hakase.tardigrader.com/">
   <link rel="stylesheet" href="styles.css">
   <script src="i18n.js" defer></script>
+  <script src="search.js" defer></script>
 </head>
 <body>
-  <main class="wrap home">
+  <main class="wrap landing">
     <div class="top">
       <a class="brand" href="./"><span class="brand-mark">●</span> かいもの博士</a>
       <nav class="lang-switch" aria-label="Language">
         <button type="button" data-set-lang="ja">日本語</button><span aria-hidden="true">/</span><button type="button" data-set-lang="en">English</button>
       </nav>
     </div>
+
+    <!-- ===================== 日本語 ===================== -->
     <div class="i18n" lang="ja">
-      <header><p class="eyebrow">Official website</p><h1>かいものを、<span>もっと賢く。</span></h1><p class="lead">ポイント込みでお得な商品を探せる、買い物比較アプリ「かいもの博士」。LPは現在準備中です。</p></header>
-      <aside class="affiliate-disclosure"><strong>広告・アフィリエイトについて</strong><p>本アプリはアフィリエイト広告を利用します。対象リンクを経由して購入等が成立すると、当方が報酬を受け取ることがあります。Amazonのアソシエイトとして、Tardigrader.Appは適格販売により収入を得ています。</p></aside>
+      <header class="hero">
+        <p class="eyebrow">Android アプリ</p>
+        <h1>1つのキーワードで、<span>全部のサイトを巡回。</span></h1>
+        <p class="lead">Amazon・楽天市場・Yahoo!ショッピング・メルカリ・ラクマ・Yahoo!フリマ…。同じ言葉を何度も打ち直すのはもう終わり。「かいもの博士」は入力した検索ワードで各サイトの検索結果を順番に開き、ポイントやクーポン込みの実質最安を<strong>公式サイトで自分の目で</strong>確かめられるようにする、広告なしの無料アプリです。</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.tardigrader_app.kaimono_hakase" rel="noopener noreferrer">Google Play で入手</a>
+          <a class="btn btn-ghost" href="#try">ブラウザで試す</a>
+        </div>
+        <p class="fine">※ 公開準備中のため、Google Play のページは近日公開です。</p>
+      </header>
+
+      <section id="try" class="tool" aria-labelledby="try-title-ja">
+        <h2 id="try-title-ja">ブラウザで試す</h2>
+        <p>探したいものを入れて、サイトを押すだけ。アプリと同じ規則で各サイトの検索結果を開きます（新しいタブで開きます）。</p>
+        <label class="kw-label" for="kw">検索ワード</label>
+        <input id="kw" class="kw" type="search" inputmode="search" autocomplete="off" placeholder="例：ワイヤレスイヤホン" aria-describedby="kw-help-ja">
+        <p id="kw-help-ja" class="fine">キーワードを入れるとボタンが有効になります。絞り込み（販売中・送料込み・価格帯・商品の状態など）はアプリで使えます。</p>
+        <div class="site-grid" data-site-list="ja" role="list"></div>
+      </section>
+
+      <section class="features" aria-labelledby="features-title-ja">
+        <h2 id="features-title-ja">アプリでできること</h2>
+        <div class="feature-grid">
+          <article><h3>9サイトを順番に巡回</h3><p>Amazon、楽天市場、ヨドバシ、Yahoo!ショッピング、メルカリ、楽天ラクマ、Yahoo!フリマ、ジモティー、Google。押すだけで公式サイト・公式アプリの検索結果に移動します。</p></article>
+          <article><h3>絞り込みを1回設定すれば全サイトに</h3><p>フリマの「販売中のみ」「送料込みのみ」「価格帯」「商品の状態」、Amazon の「プライム対象」「新品／中古」、楽天・Yahoo!の「送料無料」。いま効いている条件は検索画面に常に表示されます。</p></article>
+          <article><h3>お気に入りと履歴</h3><p>探している物を検索条件ごと保存。サイト指定のお気に入りは1タップで即検索。見つけた最安値をメモに残して、次の巡回の基準にできます。</p></article>
+          <article><h3>広告なし・計測なし</h3><p>バナー広告も、行動を追跡する計測 SDK も入れていません。検索ワードや履歴は端末の中だけに保存されます。</p></article>
+        </div>
+      </section>
+
+      <section class="how" aria-labelledby="how-title-ja">
+        <h2 id="how-title-ja">なぜ「自分の目で」なのか</h2>
+        <p>価格比較サイトの数字は、ポイント還元・クーポン・送料・タイムセールを反映しきれません。本当の実質価格は各サイトのページにログインした状態で見るのが一番確かです。かいもの博士は価格を集めて並べるのではなく、<strong>公式サイトに最短で連れて行く</strong>ことに徹しています。</p>
+      </section>
+
+      <aside class="affiliate-disclosure"><strong>広告・アフィリエイトについて</strong><p>本アプリはアフィリエイト広告を利用する場合があります。対象リンクを経由して購入等が成立すると、当方が報酬を受け取ることがあります。利用者に追加料金が発生することはありません。Amazonのアソシエイトとして、Tardigrader.Appは適格販売により収入を得ています。本ページの「ブラウザで試す」のリンクにはアフィリエイト情報を付けていません。</p></aside>
+
       <div class="link-grid">
         <a class="link-card" href="privacy/"><strong>プライバシーポリシー</strong><span>情報の取り扱いについて</span></a>
         <a class="link-card" href="terms/"><strong>利用規約</strong><span>アプリの利用条件について</span></a>
       </div>
     </div>
+
+    <!-- ===================== English ===================== -->
     <div class="i18n" lang="en">
-      <header><p class="eyebrow">Official website</p><h1>Shop <span>smarter.</span></h1><p class="lead">Dr. Kaimono helps you find better deals in Japan, including points. The full landing page is coming soon.</p></header>
-      <aside class="affiliate-disclosure"><strong>Advertising and affiliate disclosure</strong><p>The app uses affiliate advertising. We may receive compensation when a qualifying purchase or other action occurs through an eligible link. As an Amazon Associate, Tardigrader.App earns from qualifying purchases.</p></aside>
+      <header class="hero">
+        <p class="eyebrow">Android app</p>
+        <h1>One keyword. <span>Every shop, in turn.</span></h1>
+        <p class="lead">Amazon, Rakuten, Yahoo! Shopping, Mercari, Rakuma, Yahoo! Fleamarket… stop retyping the same words. Dr. Kaimono opens each site's search results for your keyword, one after another, so you can check the real price, points and coupons included, <strong>on the official site with your own eyes</strong>. Free, no ads.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.tardigrader_app.kaimono_hakase" rel="noopener noreferrer">Get it on Google Play</a>
+          <a class="btn btn-ghost" href="#try">Try it in your browser</a>
+        </div>
+        <p class="fine">The Google Play listing is coming soon.</p>
+      </header>
+
+      <section class="tool" aria-labelledby="try-title-en">
+        <h2 id="try-title-en">Try it in your browser</h2>
+        <p>Type what you are looking for and tap a site. Results open in a new tab, built with the same rules the app uses.</p>
+        <label class="kw-label" for="kw">Keyword</label>
+        <p class="fine">Buttons become active once you type a keyword. Filters (on sale, shipping included, price range, item condition and more) are available in the app.</p>
+        <div class="site-grid" data-site-list="en" role="list"></div>
+      </section>
+
+      <section class="features" aria-labelledby="features-title-en">
+        <h2 id="features-title-en">What the app does</h2>
+        <div class="feature-grid">
+          <article><h3>Nine sites, one tap each</h3><p>Amazon, Rakuten, Yodobashi, Yahoo! Shopping, Mercari, Rakuten Rakuma, Yahoo! Fleamarket, Jimoty and Google. Each button jumps straight to the official site or app.</p></article>
+          <article><h3>Set filters once, apply everywhere</h3><p>Marketplace filters such as on-sale only, shipping included, price range and item condition; Prime-only and new/used for Amazon; free shipping for Rakuten and Yahoo!. Active filters are always shown on the search screen.</p></article>
+          <article><h3>Favorites and history</h3><p>Save what you are hunting for together with its filters. Site-specific favorites search with a single tap, and a memo field keeps the best price you found so far.</p></article>
+          <article><h3>No ads, no tracking</h3><p>No banner ads and no analytics SDK. Your keywords and history stay on your device.</p></article>
+        </div>
+      </section>
+
+      <section class="how" aria-labelledby="how-title-en">
+        <h2 id="how-title-en">Why “with your own eyes”</h2>
+        <p>Price comparison sites rarely reflect point rewards, coupons, shipping or flash sales. The real price is what you see on each site while logged in. Dr. Kaimono does not scrape and rank prices; it simply gets you to the official page as fast as possible.</p>
+      </section>
+
+      <aside class="affiliate-disclosure"><strong>Advertising and affiliate disclosure</strong><p>The app may use affiliate advertising. We may receive compensation when a qualifying purchase or other action occurs through an eligible link, at no extra cost to you. As an Amazon Associate, Tardigrader.App earns from qualifying purchases. The “Try it in your browser” links on this page carry no affiliate parameters.</p></aside>
+
       <div class="link-grid">
         <a class="link-card" href="privacy/"><strong>Privacy Policy</strong><span>How information is handled</span></a>
         <a class="link-card" href="terms/"><strong>Terms of Service</strong><span>Terms for using the app</span></a>
       </div>
     </div>
+
     <footer>© 2026 Tardigrader.App</footer>
   </main>
 </body>
