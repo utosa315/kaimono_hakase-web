@@ -2,7 +2,10 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
-const { SITES, normalizeKeyword, buildUrl, nextSite } = require("../search.js");
+const { SITES, normalizeKeyword, buildUrl } = require("../search.js");
+import { existsSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
 
 test("サイトはアプリと同じ9件・同じ順", () => {
   assert.deepEqual(SITES.map((s) => s.id),
@@ -54,9 +57,10 @@ test("フリマ向けオプションはアプリと同じパラメータ（販�
   assert.equal(buildUrl("amazon", "camera", o), "https://www.amazon.co.jp/s?k=camera");
 });
 
-test("巡回：選択中のうち未訪問の先頭を返し、全部開いたら null", () => {
-  assert.equal(nextSite(["rakuten", "mercari"], []), "rakuten");
-  assert.equal(nextSite(["rakuten", "mercari"], ["rakuten"]), "mercari");
-  assert.equal(nextSite(["rakuten", "mercari"], ["rakuten", "mercari"]), null);
-  assert.equal(nextSite([], []), null);
+test("各サイトにアプリと同じアイコン画像が割り当てられ、ファイルが存在する", () => {
+  const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+  for (const s of SITES) {
+    assert.match(s.icon, /^assets\/sites\//);
+    assert.ok(existsSync(join(root, s.icon)), `${s.icon} が無い`);
+  }
 });
