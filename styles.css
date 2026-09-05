@@ -76,3 +76,44 @@ li + li { margin-top: 0.25rem; }
 @media (prefers-reduced-motion: no-preference) {
   .link-card { transition: border-color 160ms ease, transform 160ms ease; }
 }
+
+/* ---------- landing page ---------- */
+.landing { display: block; min-height: auto; padding-block: 2.5rem 5rem; }
+.landing .hero { max-width: 40rem; margin-bottom: 3rem; }
+.landing h1 span { color: var(--brand); }
+.landing .lead strong { color: var(--ink); }
+.cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.4rem; }
+.btn { display: inline-block; padding: 0.8rem 1.35rem; border-radius: 999px; font-weight: 750; text-decoration: none; }
+.btn-primary { background: var(--brand); color: #fff; box-shadow: 0 10px 24px rgba(217, 103, 53, 0.25); }
+.btn-primary:hover { background: var(--brand-dark); }
+.btn-ghost { border: 1px solid var(--line); color: var(--ink); background: var(--surface); }
+.fine { margin: 0.6rem 0 0; color: #8f8a83; font-size: 0.8rem; }
+
+.tool { margin: 0 0 3rem; padding: 1.5rem; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); box-shadow: 0 14px 40px rgba(67, 44, 29, 0.05); }
+.tool h2 { margin-top: 0; }
+.kw-label { display: block; margin: 1rem 0 0.35rem; color: var(--ink); font-size: 0.85rem; font-weight: 750; }
+.kw { width: 100%; padding: 0.9rem 1rem; border: 1px solid #d9cfc3; border-radius: 12px; background: #fff; color: var(--ink); font: inherit; font-size: 1.05rem; }
+.kw:focus { outline: 2px solid var(--brand); outline-offset: 1px; border-color: var(--brand); }
+/* 検索欄は日英で共有：英語表示では日本語ブロックの入力欄をそのまま使う */
+html[lang="en"] .i18n[lang="ja"] { display: block; }
+html[lang="en"] .i18n[lang="ja"] > :not(.tool) { display: none; }
+html[lang="en"] .i18n[lang="ja"] .tool > :not(.kw) { display: none; }
+html[lang="en"] .i18n[lang="ja"] .tool { margin: 0; padding: 0; border: 0; background: none; box-shadow: none; }
+html[lang="en"] .i18n[lang="en"] .tool { margin-top: -1.5rem; border-top-left-radius: 0; border-top-right-radius: 0; }
+.site-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin-top: 1.1rem; }
+.site { display: block; padding: 0.8rem 0.9rem; border: 1px solid var(--line); border-radius: 14px; background: #fff; color: var(--ink); text-decoration: none; }
+.site strong { display: block; font-size: 0.95rem; }
+.site span { display: block; color: var(--muted); font-size: 0.72rem; word-break: break-all; }
+.site:hover { border-color: #d7ae96; }
+.site.is-disabled { opacity: 0.45; cursor: not-allowed; }
+
+.feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.feature-grid article { padding: 1.25rem 1.3rem; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+.feature-grid h3 { margin: 0 0 0.35rem; color: var(--ink); font-size: 1rem; }
+.feature-grid p { margin: 0; font-size: 0.9rem; }
+.how p strong { color: var(--ink); }
+
+@media (max-width: 600px) {
+  .site-grid { grid-template-columns: repeat(2, 1fr); }
+  .feature-grid { grid-template-columns: 1fr; }
+}
