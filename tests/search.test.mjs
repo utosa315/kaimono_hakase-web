@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
-const { SITES, normalizeKeyword, buildUrl } = require("../search.js");
+const { SITES, normalizeKeyword, buildUrl, nextSite } = require("../search.js");
 
 test("サイトはアプリと同じ9件・同じ順", () => {
   assert.deepEqual(SITES.map((s) => s.id),
@@ -35,4 +35,28 @@ test("各サイトのベースURLはアプリの SearchUrls と一致", () => {
   assert.equal(buildUrl("rakuma", k), "https://fril.jp/s?query=camera");
   assert.equal(buildUrl("jimoty", k), "https://jmty.jp/all/sale?keyword=camera");
   assert.equal(buildUrl("google", k), "https://www.google.com/search?q=camera");
+});
+
+test("フリマ向けオプションはアプリと同じパラメータ（販売中・送料込み）", () => {
+  const o = { onSale: true, shippingIncluded: true };
+  const m = new URL(buildUrl("mercari", "camera", o));
+  assert.equal(m.searchParams.get("status"), "on_sale");
+  assert.equal(m.searchParams.get("shipping_payer_id"), "2");
+  const r = new URL(buildUrl("rakuma", "camera", o));
+  assert.equal(r.searchParams.get("transaction"), "selling");
+  assert.equal(r.searchParams.get("carriage"), "1");
+  const p = new URL(buildUrl("paypay", "camera", o));
+  assert.equal(p.searchParams.get("open"), "1");
+  assert.equal(p.searchParams.has("shipping_payer_id"), false); // 全品送料込み
+  // オプションOFFなら付かない
+  assert.equal(buildUrl("mercari", "camera"), "https://jp.mercari.com/search?keyword=camera");
+  // EC サイトには効かない
+  assert.equal(buildUrl("amazon", "camera", o), "https://www.amazon.co.jp/s?k=camera");
+});
+
+test("巡回：選択中のうち未訪問の先頭を返し、全部開いたら null", () => {
+  assert.equal(nextSite(["rakuten", "mercari"], []), "rakuten");
+  assert.equal(nextSite(["rakuten", "mercari"], ["rakuten"]), "mercari");
+  assert.equal(nextSite(["rakuten", "mercari"], ["rakuten", "mercari"]), null);
+  assert.equal(nextSite([], []), null);
 });
