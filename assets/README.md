@@ -4,7 +4,7 @@
 - `icon-1024.png` / `icon-512.png` / `icon-192.png` / `apple-touch-icon.png` / `favicon.png` — アプリのランチャーアイコン（黒背景に博士サメ＋黄色い値札）。アプリ側 `assets/app_icon/kaimono_hakase_icon.png` から生成。
 - `icon-foreground.svg` — 背景透過の博士サメ（AppBar と同じ素材）。ヘッダーのブランドマークに使用。
 
-## 生成して差し替える画像（Codex 等で作成。無いときは CSS のプレースホルダーが表示される）
+## 生成画像（Codex CLI の image_gen で 2026-09-06 に生成済み。作り直すときは同じ指示で）
 すべて博士サメ（黒白シルエット、黄色い値札）の世界観に合わせる。写実ではなくフラットなイラスト。背景は `#fbf8f2`（サイトの紙色）か透過。
 
 | ファイル | サイズ | 用途・内容 |
