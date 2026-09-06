@@ -29,6 +29,15 @@
 
   function apply(lang) {
     html.lang = lang;
+    document.querySelectorAll("[data-ja][data-en]").forEach(function (element) {
+      if (element.tagName === "META") return;
+      element.textContent = element.dataset[lang];
+    });
+    document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+      button.setAttribute("aria-pressed", String(button.dataset.setLang === lang));
+    });
+    var keyword = document.getElementById("kw");
+    if (keyword) keyword.placeholder = lang === "en" ? "e.g. wireless earbuds or a model number" : "例：ワイヤレスイヤホン、商品の型番";
     var title = document.querySelector("title");
     if (title && title.dataset[lang]) document.title = title.dataset[lang];
     var description = document.querySelector('meta[name="description"]');

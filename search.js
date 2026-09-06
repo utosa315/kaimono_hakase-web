@@ -96,7 +96,6 @@
         a.dataset.site = site.id;
         a.target = "_blank";
         a.rel = "noopener noreferrer";
-        a.setAttribute("role", "listitem");
         a.innerHTML = '<img class="site-icon" alt="" width="40" height="40">' +
           '<span class="site-text"><strong></strong><span></span></span>' +
           '<span class="site-arrow" aria-hidden="true">&#8594;</span>';
@@ -115,7 +114,12 @@
           if (url) { a.href = url; a.classList.remove("is-disabled"); a.removeAttribute("aria-disabled"); }
           else { a.href = "#"; a.classList.add("is-disabled"); a.setAttribute("aria-disabled", "true"); }
           a.classList.toggle("is-visited", visited.indexOf(site.id) >= 0);
+          a.setAttribute("aria-label", t(site.name.ja + "で検索（新しいタブ）", "Search on " + site.name.en + " (new tab)") + (visited.indexOf(site.id) >= 0 ? t("・確認済み", ", checked") : ""));
         });
+        var status = document.getElementById("search-status");
+        if (status) status.textContent = !kw ? t("商品名を入力するか、上の例を選んでください。", "Enter a product name or select an example above.") :
+          visited.length ? t(visited.length + " / 9 サイトを確認済み。次のサイトも探し比べましょう。", visited.length + " / 9 sites checked. Try another site to compare.") :
+          t("検索するサイトを選んでください。", "Choose a site to search.");
       }
       function resetVisited() { visited = []; refresh(); }
 
@@ -130,12 +134,18 @@
         if (visited.indexOf(a.dataset.site) < 0) visited.push(a.dataset.site);
         refresh();
       });
-      // Enter は先頭のサイトを開く（アプリの並びの先頭＝Amazon）
+      document.querySelectorAll("[data-keyword]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          input.value = button.dataset.keyword;
+          resetVisited();
+          input.focus();
+        });
+      });
+      // IME確定時に送客しない。Enterは検索先の選択へ進める。
       input.addEventListener("keydown", function (e) {
-        if (e.key !== "Enter") return;
+        if (e.key !== "Enter" || e.isComposing || e.keyCode === 229) return;
         e.preventDefault();
-        var url = buildUrl(SITES[0].id, input.value, options());
-        if (url) { window.open(url, "_blank", "noopener"); if (visited.indexOf(SITES[0].id) < 0) visited.push(SITES[0].id); refresh(); }
+        if (normalizeKeyword(input.value)) list.querySelector("a.site-card").focus();
       });
       document.addEventListener("click", function (e) { if (e.target.closest("[data-set-lang]")) setTimeout(refresh, 0); });
       refresh();

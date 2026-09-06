@@ -3,172 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title data-ja="かいもの博士｜1つのキーワードで通販・フリマを横断検索" data-en="Dr. Kaimono | Search every shop with one keyword">かいもの博士｜1つのキーワードで通販・フリマを横断検索</title>
-  <meta name="description" data-ja="Amazon・楽天・Yahoo!ショッピング・メルカリ・ラクマ・Yahoo!フリマなどを1つのキーワードで順番に検索。ポイントやクーポン込みの実質最安を、公式サイトで自分の目で確かめられる無料アプリ「かいもの博士」の公式サイト。ブラウザでも試せます。" data-en="Search Amazon, Rakuten, Yahoo! Shopping, Mercari and more in Japan with a single keyword and compare real prices on each official site. Official site of the free Dr. Kaimono app, with a browser version to try." content="Amazon・楽天・Yahoo!ショッピング・メルカリ・ラクマ・Yahoo!フリマなどを1つのキーワードで順番に検索。ポイントやクーポン込みの実質最安を、公式サイトで自分の目で確かめられる無料アプリ「かいもの博士」の公式サイト。ブラウザでも試せます。">
+  <title data-ja="かいもの博士｜本当にお得かは、あなたの条件で。" data-en="Dr. Kaimono | Find a better deal on your terms">かいもの博士｜本当にお得かは、あなたの条件で。</title>
+  <meta name="description" data-ja="通販もフリマも、ひとつのキーワードで探し比べ。会員ランクのポイント還元・クーポン・キャンペーンは各サイトで確認。9つの検索先に対応、ブラウザで無料ですぐ使えます。" data-en="One keyword for nine shopping and search sites in Japan. Check your member rewards, coupons and campaigns on each site. Try Dr. Kaimono free in your browser." content="通販もフリマも、ひとつのキーワードで探し比べ。会員ランクのポイント還元・クーポン・キャンペーンは各サイトで確認。9つの検索先に対応、ブラウザで無料ですぐ使えます。">
   <meta name="theme-color" content="#fbf8f2">
-  <meta property="og:title" content="かいもの博士｜1つのキーワードで通販・フリマを横断検索">
-  <meta property="og:description" content="Amazon・楽天・メルカリなど9サイトを1つのキーワードで巡回。ポイント込みの実質最安を公式サイトで確認できる無料アプリ。">
+  <meta property="og:title" content="かいもの博士｜本当にお得かは、あなたの条件で。">
+  <meta property="og:description" content="通販もフリマも、ひとつのキーワードで探し比べ。ポイント・クーポンは各サイトで確認。ブラウザで無料ですぐ使えます。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kaimono-hakase.tardigrader.com/">
   <meta property="og:image" content="https://kaimono-hakase.tardigrader.com/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://kaimono-hakase.tardigrader.com/">
-  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "かいもの博士",
-    "alternateName": "Dr. Kaimono",
-    "operatingSystem": "Android",
-    "applicationCategory": "ShoppingApplication",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
-    "description": "1つのキーワードでAmazon・楽天市場・Yahoo!ショッピング・メルカリ・ラクマ・Yahoo!フリマなど9サイトの検索結果を順番に開く、広告なしの無料アプリ。",
-    "url": "https://kaimono-hakase.tardigrader.com/",
-    "image": "https://kaimono-hakase.tardigrader.com/assets/icon-512.png",
-    "author": { "@type": "Organization", "name": "Tardigrader.App" }
-  }
-  </script>
+  <link rel="stylesheet" href="landing.css">
   <script src="i18n.js" defer></script>
   <script src="search.js" defer></script>
 </head>
 <body>
-  <main class="wrap landing">
-    <div class="top">
-      <a class="brand" href="./"><img class="brand-icon" src="assets/icon-foreground.svg" alt="" width="28" height="28"> かいもの博士</a>
-      <nav class="lang-switch" aria-label="Language">
-        <button type="button" data-set-lang="ja">日本語</button><span aria-hidden="true">/</span><button type="button" data-set-lang="en">English</button>
-      </nav>
-    </div>
-
-    <!-- ===== 上半分：アプリ風ツール（日英共通の1つのツールを、見出しだけ切り替える） ===== -->
-    <section class="app-shell" aria-labelledby="tool-title">
-      <div class="app-bar">
-        <img src="assets/icon-1024.png" alt="" width="40" height="40" class="app-bar-icon">
-        <div class="i18n" lang="ja"><h1 id="tool-title" class="app-title">かいもの博士</h1><p class="app-sub">1つのキーワードで、全部のサイトを巡回。</p></div>
-        <div class="i18n" lang="en"><h1 class="app-title">Dr. Kaimono</h1><p class="app-sub">One keyword. Every shop, in turn.</p></div>
-      </div>
-
-      <div class="app-body">
-        <div class="i18n" lang="ja"><label class="kw-label" for="kw">検索ワード</label></div>
-        <div class="i18n" lang="en"><label class="kw-label" for="kw">Keyword</label></div>
-        <input id="kw" class="kw" type="search" inputmode="search" autocomplete="off" placeholder="例：ワイヤレスイヤホン / e.g. wireless earbuds" aria-describedby="kw-help">
-
-        <div class="opt-row" role="group" aria-label="フリマの絞り込み / Marketplace filters">
-          <label class="opt"><input id="opt-onsale" type="checkbox"><span class="i18n" lang="ja">販売中のみ</span><span class="i18n" lang="en">On sale only</span></label>
-          <label class="opt"><input id="opt-ship" type="checkbox"><span class="i18n" lang="ja">送料込みのみ</span><span class="i18n" lang="en">Shipping included</span></label>
-          <span class="opt-note i18n" lang="ja">フリマ3サイトに適用。アプリではさらに価格帯・商品の状態・並び順・除外ワードなどが使えます。</span>
-          <span class="opt-note i18n" lang="en">Applies to the three marketplaces. The app adds price range, item condition, sort order, excluded words and more.</span>
+  <a class="skip-link" href="#search" data-ja="検索へスキップ" data-en="Skip to search">検索へスキップ</a>
+  <div class="wrap landing">
+    <header class="masthead">
+      <a class="brand" href="./"><img src="assets/icon-192.png" alt="" width="38" height="38"><span data-ja="かいもの博士" data-en="Dr. Kaimono">かいもの博士</span></a>
+      <nav class="header-nav" aria-label="Main navigation"><a href="#why" data-ja="選ばれる理由" data-en="Why use it">選ばれる理由</a><a href="#app" data-ja="アプリについて" data-en="Android app">アプリについて</a></nav>
+      <nav class="lang-switch" aria-label="Language"><button type="button" data-set-lang="ja">日本語</button><span aria-hidden="true">/</span><button type="button" data-set-lang="en">English</button></nav>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="hero-title">
+        <div class="intro-copy">
+          <p class="eyebrow" data-ja="買う前の、ひと手間をかんたんに。" data-en="A little check before you buy.">買う前の、ひと手間をかんたんに。</p>
+          <h1 id="hero-title"><span data-ja="本当にお得かは、" data-en="A better deal.">本当にお得かは、</span><br><em data-ja="あなたの条件で。" data-en="On your terms.">あなたの条件で。</em></h1>
+          <p class="intro-lead" data-ja="通販もフリマも、ひとつのキーワードで探し比べ。ポイント還元やクーポンは、いつものアカウントで各サイトを確認。納得できる買い物を。" data-en="One keyword for shops and marketplaces across Japan. Check rewards and coupons on each site with your usual account, and buy with confidence.">通販もフリマも、ひとつのキーワードで探し比べ。ポイント還元やクーポンは、いつものアカウントで各サイトを確認。納得できる買い物を。</p>
+          <div class="cta-row"><a class="btn btn-primary" href="#search" data-ja="無料で探し比べる ↓" data-en="Compare shops for free ↓">無料で探し比べる ↓</a><a class="text-link" href="#why" data-ja="どうして各サイトで確認するの？" data-en="Why check each site?">どうして各サイトで確認するの？</a></div>
+          <p class="fine" data-ja="インストール不要 · 登録不要 · iPhone / Android / PC" data-en="No install · No registration · Mobile and desktop">インストール不要 · 登録不要 · iPhone / Android / PC</p>
         </div>
-
-        <p id="kw-help" class="fine i18n" lang="ja">サイトを押すと、そのサイトの検索結果を新しいタブで開きます。開いたサイトには ✓ が付きます。</p>
-        <p class="fine i18n" lang="en">Tap a site to open its search results in a new tab. Sites you have opened are marked with ✓.</p>
-
-        <div id="site-list" class="site-grid" role="list"></div>
-      </div>
-    </section>
-
-    <!-- ===== 下半分：説明（SEO） ===== -->
-    <div class="i18n" lang="ja">
-      <section class="hero">
-        <div class="hero-text">
-          <p class="eyebrow">Android アプリ・無料・広告なし</p>
-          <h2 class="h1like">同じ言葉を、<span>何度も打ち直さない。</span></h2>
-          <p class="lead">Amazon・楽天市場・Yahoo!ショッピング・メルカリ・ラクマ・Yahoo!フリマ…。買い物のたびに各サイトを開いて同じ検索語を入れる、その手間をなくすアプリです。「かいもの博士」は入力した検索ワードで各サイトの検索結果を順番に開き、ポイントやクーポン込みの実質最安を<strong>公式サイトで自分の目で</strong>確かめられるようにします。上のツールはその Web 版です。アプリでは絞り込みの保存、お気に入り、履歴、共有からの検索が使えます。</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.tardigrader_app.kaimono_hakase" rel="noopener noreferrer">Google Play で入手</a>
-            <a class="btn btn-ghost" href="#tool-title">ブラウザで試す</a>
-          </div>
-          <p class="fine">※ 公開準備中のため、Google Play のページは近日公開です。</p>
-        </div>
-        <div class="hero-art" aria-hidden="true"><img src="assets/hero.png" alt="" loading="lazy" onerror="this.parentNode.classList.add('missing')"></div>
+        <aside class="benefit-note">
+          <img src="assets/icon-512.png" width="112" height="112" alt="" class="professor">
+          <p class="note-heading" data-ja="値札だけで、決めていませんか？" data-en="There’s more to a deal than its price.">値札だけで、決めていませんか？</p>
+          <ul class="checks"><li data-ja="会員ランクに応じたポイント" data-en="Rewards for your membership tier">会員ランクに応じたポイント</li><li data-ja="自分が使えるクーポン" data-en="Coupons you can actually use">自分が使えるクーポン</li><li data-ja="開催中のポイントアップ" data-en="Current bonus-point campaigns">開催中のポイントアップ</li></ul>
+          <p data-ja="あなたに適用される条件は、各サイトで。" data-en="Check the terms that apply to you on each site.">あなたに適用される条件は、各サイトで。</p>
+        </aside>
       </section>
-
-      <section class="features" aria-labelledby="features-title-ja">
-        <h2 id="features-title-ja">アプリでできること</h2>
-        <div class="feature-grid">
-          <article><img class="feature-art" src="assets/feature-sites.png" alt="" loading="lazy" onerror="this.remove()"><h3>9サイトを順番に巡回</h3><p>Amazon、楽天市場、ヨドバシ、Yahoo!ショッピング、メルカリ、楽天ラクマ、Yahoo!フリマ、ジモティー、Google。押すだけで公式サイト・公式アプリの検索結果に移動します。</p></article>
-          <article><img class="feature-art" src="assets/feature-filters.png" alt="" loading="lazy" onerror="this.remove()"><h3>絞り込みを1回設定すれば全サイトに</h3><p>フリマの「販売中のみ」「送料込みのみ」「価格帯」「商品の状態」、Amazon の「プライム対象」「新品／中古」、楽天・Yahoo!の「送料無料」。いま効いている条件は検索画面に常に表示され、デフォルトとして保存もできます。</p></article>
-          <article><img class="feature-art" src="assets/feature-favorites.png" alt="" loading="lazy" onerror="this.remove()"><h3>お気に入りと履歴</h3><p>探している物を検索条件ごと保存。サイト指定のお気に入りは1タップで即検索。見つけた最安値をメモに残して、次の巡回の基準にできます。履歴からもワンタップで再検索。</p></article>
-          <article><img class="feature-art" src="assets/feature-noads.png" alt="" loading="lazy" onerror="this.remove()"><h3>広告なし・計測なし</h3><p>バナー広告も、行動を追跡する計測 SDK も入れていません。検索ワードや履歴は端末の中だけに保存されます。</p></article>
+      <section id="search" class="search-section" aria-labelledby="tool-title">
+        <div class="section-heading"><div><p class="eyebrow">LET’S COMPARE</p><h2 id="tool-title" data-ja="気になるものを、探し比べ。" data-en="What are you looking for?">気になるものを、探し比べ。</h2></div><span class="free-label" data-ja="ブラウザ版・無料" data-en="Free web tool">ブラウザ版・無料</span></div>
+        <div class="search-box">
+          <label class="kw-label" for="kw" data-ja="1. 商品名や型番を入力" data-en="1. Enter a product name or model">1. 商品名や型番を入力</label>
+          <input id="kw" class="kw" type="search" inputmode="search" autocomplete="off" placeholder="例：ワイヤレスイヤホン" aria-describedby="kw-help search-status" maxlength="500">
+          <div class="examples"><span data-ja="例えば" data-en="Try">例えば</span><button type="button" data-keyword="ワイヤレスイヤホン" data-ja="ワイヤレスイヤホン" data-en="Wireless earbuds">ワイヤレスイヤホン</button><button type="button" data-keyword="日焼け止め" data-ja="日焼け止め" data-en="Sunscreen">日焼け止め</button><button type="button" data-keyword="レゴ" data-ja="レゴ" data-en="LEGO">レゴ</button></div>
+          <details class="filter-details"><summary data-ja="フリマの検索条件" data-en="Marketplace filters">フリマの検索条件</summary><div class="opt-row"><label class="opt"><input id="opt-onsale" type="checkbox"><span data-ja="販売中のみ" data-en="Available only">販売中のみ</span></label><label class="opt"><input id="opt-ship" type="checkbox"><span data-ja="送料込みのみ" data-en="Shipping included">送料込みのみ</span></label></div><p class="fine" data-ja="メルカリ・ラクマ・Yahoo!フリマに適用。Yahoo!フリマは全品送料込みです。" data-en="For Mercari, Rakuma and Yahoo! Fleamarket. Yahoo! Fleamarket already includes shipping.">メルカリ・ラクマ・Yahoo!フリマに適用。Yahoo!フリマは全品送料込みです。</p></details>
+          <p class="kw-label" data-ja="2. サイトを選んで、条件を確認" data-en="2. Choose a site and check your deal">2. サイトを選んで、条件を確認</p>
+          <p id="kw-help" class="fine" data-ja="検索結果を新しいタブで開きます。このページに戻って、次のサイトも確認できます。" data-en="Results open in a new tab. Come back here to check another site.">検索結果を新しいタブで開きます。このページに戻って、次のサイトも確認できます。</p>
+          <div id="site-list" class="site-grid"></div>
+          <p id="search-status" class="search-status" role="status" aria-live="polite"></p>
+          <noscript><p>検索ツールにはJavaScriptが必要です。 / Please enable JavaScript to use the search tool.</p></noscript>
         </div>
       </section>
-
-      <section class="how" aria-labelledby="how-title-ja">
-        <h2 id="how-title-ja">なぜ「自分の目で」なのか</h2>
-        <p>価格比較サイトの数字は、ポイント還元・クーポン・送料・タイムセールを反映しきれません。本当の実質価格は各サイトのページにログインした状態で見るのが一番確かです。かいもの博士は価格を集めて並べるのではなく、<strong>公式サイトに最短で連れて行く</strong>ことに徹しています。だからこそ、どのサイトの表示もそのサイトが提供するそのままです。</p>
+      <section id="why" class="why-section" aria-labelledby="why-title">
+        <p class="eyebrow">YOUR ACCOUNT. YOUR DEAL.</p><h2 id="why-title" data-ja="「お得」は、人によって違うから。" data-en="The best deal depends on you.">「お得」は、人によって違うから。</h2>
+        <p class="section-lead" data-ja="会員ランク、使えるクーポン、エントリーしたキャンペーン。表示価格が同じでも、あなたが受けられる特典は変わります。だから、かいもの博士は各サイトの検索結果へ案内します。" data-en="Your membership tier, coupons and campaign entries can change the value of a purchase. Dr. Kaimono takes you to each site so you can check the benefits available to you.">会員ランク、使えるクーポン、エントリーしたキャンペーン。表示価格が同じでも、あなたが受けられる特典は変わります。だから、かいもの博士は各サイトの検索結果へ案内します。</p>
+        <div class="reason-grid"><article><span class="step">01</span><h3 data-ja="入力は、一度で。" data-en="Type it once.">入力は、一度で。</h3><p data-ja="同じキーワードで9つの検索先へ。サイトごとに打ち直す手間を減らします。" data-en="Reuse one keyword across nine destinations, without typing it again on every site.">同じキーワードで9つの検索先へ。サイトごとに打ち直す手間を減らします。</p></article><article><span class="step">02</span><h3 data-ja="いつものアカウントで。" data-en="Use your usual account.">いつものアカウントで。</h3><p data-ja="各サイトで必要に応じてログイン。ポイントの上限、クーポンの条件、送料も確認できます。" data-en="Sign in on each site when needed. Check reward caps, coupon conditions and shipping.">各サイトで必要に応じてログイン。ポイントの上限、クーポンの条件、送料も確認できます。</p></article><article><span class="step">03</span><h3 data-ja="納得して、選ぶ。" data-en="Choose with confidence.">納得して、選ぶ。</h3><p data-ja="価格だけでなく、配送日や商品の状態も見比べて。購入は選んだサイトで行います。" data-en="Consider delivery dates and item condition as well as price. Buy directly on your chosen site.">価格だけでなく、配送日や商品の状態も見比べて。購入は選んだサイトで行います。</p></article></div>
       </section>
-
-      <section class="faq" aria-labelledby="faq-title-ja">
-        <h2 id="faq-title-ja">よくある質問</h2>
-        <dl>
-          <dt>価格の比較表は出ませんか？</dt><dd>出ません。各サイトの検索結果ページをそのまま開きます。ポイントやクーポンはログイン状態で見ないと正確にならないためです。</dd>
-          <dt>iPhone 版はありますか？</dt><dd>現在は Android 版のみです。Web 版（このページ上部のツール）はどの端末のブラウザでも使えます。</dd>
-          <dt>料金はかかりますか？</dt><dd>無料です。アプリ内課金や広告はありません。運営費はアフィリエイト（下記）でまかなう予定です。</dd>
-          <dt>検索した内容はどこかに送られますか？</dt><dd>検索ワードは、あなたが押したサイトにだけ送られます。当方のサーバーには送信も保存もされません。詳しくは<a href="privacy/">プライバシーポリシー</a>をご覧ください。</dd>
-        </dl>
-      </section>
-
-      <aside class="affiliate-disclosure"><strong>広告・アフィリエイトについて</strong><p>本アプリはアフィリエイト広告を利用する場合があります。対象リンクを経由して購入等が成立すると、当方が報酬を受け取ることがあります。利用者に追加料金が発生することはありません。Amazonのアソシエイトとして、Tardigrader.Appは適格販売により収入を得ています。本ページ上部の Web 版ツールのリンクにはアフィリエイト情報を付けていません。</p></aside>
-
-      <div class="link-grid">
-        <a class="link-card" href="privacy/"><strong>プライバシーポリシー</strong><span>情報の取り扱いについて</span></a>
-        <a class="link-card" href="terms/"><strong>利用規約</strong><span>アプリの利用条件について</span></a>
-      </div>
-    </div>
-
-    <div class="i18n" lang="en">
-      <section class="hero">
-        <div class="hero-text">
-          <p class="eyebrow">Android app · Free · No ads</p>
-          <h2 class="h1like">Stop retyping <span>the same words.</span></h2>
-          <p class="lead">Amazon, Rakuten, Yahoo! Shopping, Mercari, Rakuma, Yahoo! Fleamarket… Dr. Kaimono opens each site's search results for your keyword, one after another, so you can check the real price, points and coupons included, <strong>on the official site with your own eyes</strong>. The tool above is the web version; the app adds saved filters, favorites, history and search-from-share.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.tardigrader_app.kaimono_hakase" rel="noopener noreferrer">Get it on Google Play</a>
-            <a class="btn btn-ghost" href="#tool-title">Try it in your browser</a>
-          </div>
-          <p class="fine">The Google Play listing is coming soon.</p>
-        </div>
-        <div class="hero-art" aria-hidden="true"><img src="assets/hero.png" alt="" loading="lazy" onerror="this.parentNode.classList.add('missing')"></div>
-      </section>
-
-      <section class="features" aria-labelledby="features-title-en">
-        <h2 id="features-title-en">What the app does</h2>
-        <div class="feature-grid">
-          <article><img class="feature-art" src="assets/feature-sites.png" alt="" loading="lazy" onerror="this.remove()"><h3>Nine sites, one tap each</h3><p>Amazon, Rakuten, Yodobashi, Yahoo! Shopping, Mercari, Rakuten Rakuma, Yahoo! Fleamarket, Jimoty and Google. Each button jumps straight to the official site or app.</p></article>
-          <article><img class="feature-art" src="assets/feature-filters.png" alt="" loading="lazy" onerror="this.remove()"><h3>Set filters once, apply everywhere</h3><p>On-sale only, shipping included, price range and item condition for marketplaces; Prime-only and new/used for Amazon; free shipping for Rakuten and Yahoo!. Active filters are always visible and can be saved as your default.</p></article>
-          <article><img class="feature-art" src="assets/feature-favorites.png" alt="" loading="lazy" onerror="this.remove()"><h3>Favorites and history</h3><p>Save what you are hunting for together with its filters. Site-specific favorites search with a single tap, a memo keeps the best price you found so far, and history re-runs any past search.</p></article>
-          <article><img class="feature-art" src="assets/feature-noads.png" alt="" loading="lazy" onerror="this.remove()"><h3>No ads, no tracking</h3><p>No banner ads and no analytics SDK. Your keywords and history stay on your device.</p></article>
-        </div>
-      </section>
-
-      <section class="how" aria-labelledby="how-title-en">
-        <h2 id="how-title-en">Why “with your own eyes”</h2>
-        <p>Price comparison sites rarely reflect point rewards, coupons, shipping or flash sales. The real price is what you see on each site while logged in. Dr. Kaimono does not scrape and rank prices; it simply gets you to the official page as fast as possible, so every listing is exactly what that site shows.</p>
-      </section>
-
-      <section class="faq" aria-labelledby="faq-title-en">
-        <h2 id="faq-title-en">FAQ</h2>
-        <dl>
-          <dt>Is there a price comparison table?</dt><dd>No. The app opens each site's own results page, because points and coupons are only accurate while you are logged in there.</dd>
-          <dt>Is there an iPhone version?</dt><dd>Android only for now. The web tool at the top of this page works in any browser.</dd>
-          <dt>Does it cost anything?</dt><dd>It is free, with no in-app purchases or ads. Running costs are planned to be covered by affiliate links (see below).</dd>
-          <dt>Where do my searches go?</dt><dd>Only to the site you tap. Nothing is sent to or stored on our servers. See the <a href="privacy/">Privacy Policy</a>.</dd>
-        </dl>
-      </section>
-
-      <aside class="affiliate-disclosure"><strong>Advertising and affiliate disclosure</strong><p>The app may use affiliate advertising. We may receive compensation when a qualifying purchase or other action occurs through an eligible link, at no extra cost to you. As an Amazon Associate, Tardigrader.App earns from qualifying purchases. The web tool on this page carries no affiliate parameters.</p></aside>
-
-      <div class="link-grid">
-        <a class="link-card" href="privacy/"><strong>Privacy Policy</strong><span>How information is handled</span></a>
-        <a class="link-card" href="terms/"><strong>Terms of Service</strong><span>Terms for using the app</span></a>
-      </div>
-    </div>
-
-    <footer>© 2026 Tardigrader.App</footer>
-  </main>
+      <section id="app" class="app-section" aria-labelledby="app-title"><div class="app-copy"><p class="eyebrow">FOR YOUR NEXT SHOPPING TRIP</p><h2 id="app-title" data-ja="次の買い物も、もっとスムーズに。" data-en="Make your next search easier.">次の買い物も、もっとスムーズに。</h2><p data-ja="Androidアプリでは、検索条件を保存。お気に入りや履歴から、気になるものをもう一度探せます。" data-en="The Android app saves your filters. Revisit favorites and search history whenever you want to look again.">Androidアプリでは、検索条件を保存。お気に入りや履歴から、気になるものをもう一度探せます。</p><ul class="checks"><li data-ja="価格帯・商品の状態など、サイトに合う絞り込み" data-en="Site-specific filters for price, condition and more">価格帯・商品の状態など、サイトに合う絞り込み</li><li data-ja="検索条件ごと残せるお気に入り" data-en="Favorites that remember your filters">検索条件ごと残せるお気に入り</li><li data-ja="履歴から、すぐ再検索" data-en="Search again from your history">履歴から、すぐ再検索</li></ul><p class="release-label" data-ja="Android版は公開準備中です" data-en="Android release in preparation">Android版は公開準備中です</p><a class="btn btn-primary" href="#search" data-ja="今はブラウザで使う ↑" data-en="Use the web tool now ↑">今はブラウザで使う ↑</a><p class="fine" data-ja="このページをブックマークして、次の買い物にも。" data-en="Bookmark this page for your next shopping trip.">このページをブックマークして、次の買い物にも。</p></div><figure class="app-preview"><img src="assets/app-search.png" alt="かいもの博士の検索画面 / Dr. Kaimono search screen" width="1080" height="2424" loading="lazy"><figcaption data-ja="Androidアプリの実際の画面（開発版）" data-en="Actual Android app screen (development build)">Androidアプリの実際の画面（開発版）</figcaption></figure></section>
+      <section class="faq-section" aria-labelledby="faq-title"><p class="eyebrow">FAQ</p><h2 id="faq-title" data-ja="気になること" data-en="Good to know">気になること</h2><details><summary data-ja="ポイント込みの価格を自動計算しますか？" data-en="Does it calculate prices after rewards?">ポイント込みの価格を自動計算しますか？</summary><p data-ja="自動計算や最安値の判定は行いません。各サイトでログインし、あなたに適用されるポイントやクーポンをご確認ください。ポイントの有効期限・上限・利用条件もサイトごとに異なります。" data-en="No automatic calculation or lowest-price ranking is provided. Sign in on each site to check your rewards and coupons, including expiry dates, caps and conditions.">自動計算や最安値の判定は行いません。各サイトでログインし、あなたに適用されるポイントやクーポンをご確認ください。ポイントの有効期限・上限・利用条件もサイトごとに異なります。</p></details><details><summary data-ja="無料ですか？ iPhoneでも使えますか？" data-en="Is it free? Does it work on iPhone?">無料ですか？ iPhoneでも使えますか？</summary><p data-ja="このページの検索ツールは無料・登録不要です。iPhone、Android、PCのブラウザで使えます。Androidアプリは公開準備中です。" data-en="This web tool is free and needs no registration. Use it on iPhone, Android or desktop. The Android app is being prepared for release.">このページの検索ツールは無料・登録不要です。iPhone、Android、PCのブラウザで使えます。Androidアプリは公開準備中です。</p></details><details><summary data-ja="検索ワードは保存されますか？" data-en="Are my searches saved?">検索ワードは保存されますか？</summary><p data-ja="このWebツールは検索ワードを当方のサーバーに送信・保存しません。サイトを選ぶと、検索ワードと対応する条件がその外部サービスに送られます。" data-en="This web tool does not send or save your keywords to our servers. Selecting a site sends your keyword and supported filters to that service.">このWebツールは検索ワードを当方のサーバーに送信・保存しません。サイトを選ぶと、検索ワードと対応する条件がその外部サービスに送られます。</p></details></section>
+      <aside class="affiliate-disclosure"><strong data-ja="広告・アフィリエイトについて" data-en="Advertising and affiliate disclosure">広告・アフィリエイトについて</strong><p data-ja="アプリは、設定が有効な場合にアフィリエイト広告を利用します。対象リンクから購入等が成立すると、当方が報酬を受け取る場合があります。Amazonのアソシエイトとして、Tardigrader.Appは適格販売により収入を得ています。このページの検索リンクにはアフィリエイト情報を付けていません。" data-en="The app uses affiliate advertising when enabled. We may earn a commission from qualifying purchases through eligible links. As an Amazon Associate, Tardigrader.App earns from qualifying purchases. This page’s search links contain no affiliate parameters.">アプリは、設定が有効な場合にアフィリエイト広告を利用します。対象リンクから購入等が成立すると、当方が報酬を受け取る場合があります。Amazonのアソシエイトとして、Tardigrader.Appは適格販売により収入を得ています。このページの検索リンクにはアフィリエイト情報を付けていません。</p></aside>
+    </main>
+    <footer class="site-footer"><a class="brand" href="./" data-ja="かいもの博士" data-en="Dr. Kaimono">かいもの博士</a><nav aria-label="Legal"><a href="privacy/" data-ja="プライバシーポリシー" data-en="Privacy Policy">プライバシーポリシー</a><a href="terms/" data-ja="利用規約" data-en="Terms of Service">利用規約</a></nav><small>© 2026 Tardigrader.App</small></footer>
+  </div>
 </body>
 </html>

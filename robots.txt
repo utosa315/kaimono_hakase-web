@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kaimono-hakase.tardigrader.com/sitemap.xml
